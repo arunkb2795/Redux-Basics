@@ -4,8 +4,8 @@ import { counterActions } from "../../Redux/Store";
 export default function Counter() {
   //main advantage of using useSelector is
   //subscription to the store done automatically and update the state.
-  const counter = useSelector((state) => state.counter);
-  const show = useSelector((state) => state.isShow);
+  const counter = useSelector((state) => state.counter.counter);
+  const show = useSelector((state) => state.counter.isShow);
   const dispatch = useDispatch();
   const [userValue, setUserValue] = useState(0);
   const handleIncrement = () => {
