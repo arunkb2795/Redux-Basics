@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { counterActions } from "../../Redux/Store";
 export default function Counter() {
   //main advantage of using useSelector is
   //subscription to the store done automatically and update the state.
@@ -8,16 +9,16 @@ export default function Counter() {
   const dispatch = useDispatch();
   const [userValue, setUserValue] = useState(0);
   const handleIncrement = () => {
-    dispatch({ type: "INCREMENT" });
+    dispatch(counterActions.increment());
   };
   const handleDecrement = () => {
-    dispatch({ type: "DECREMENT" });
+    dispatch(counterActions.decrement());
   };
   const handleReset = () => {
-    dispatch({ type: "RESET" });
+    dispatch(counterActions.reset());
   };
   const handleToggle = () => {
-    dispatch({ type: "TOGGLE" });
+    dispatch(counterActions.toggle());
   };
 
   const handleInputChange = (e) => {
@@ -25,7 +26,7 @@ export default function Counter() {
   };
   const handleIncrease = () => {
     console.log(userValue);
-    dispatch({ type: "INCREASE", amount: userValue });
+    dispatch(counterActions.increase(userValue));
   };
   return (
     <div>
