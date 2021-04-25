@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { authActions } from "../../Redux/Store";
+import { authActions } from "../../Redux/Store/auth";
 
 export default function Login() {
   const [email, setEmail] = useState("");

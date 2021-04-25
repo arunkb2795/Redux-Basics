@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { counterActions } from "../../Redux/Store";
+import { counterActions } from "../../Redux/Store/counter";
 export default function Counter() {
   //main advantage of using useSelector is
   //subscription to the store done automatically and update the state.

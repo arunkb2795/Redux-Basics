@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { authActions } from "../../Redux/Store";
+import { authActions } from "../../Redux/Store/auth";
 export default function UserProfile() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
